@@ -1,0 +1,150 @@
+.root {
+        background-color: #161616;
+        accent-color-dark: #232323;
+        accent-color-blue: #0099ff;
+        text-color: white;
+
+        -fx-background-color: background-color;
+        -fx-selection-bar: accent-color-dark;
+}
+
+/* All text in all windows */
+.text {
+    -fx-fill: text-color;
+}
+
+/******************************************************************************
+ * Menus - Start                                                              *
+ ******************************************************************************/
+
+.menu-bar, .menu-item {
+    -fx-background-color: background-color;
+    -fx-background-radius: 0, 0;
+    -fx-effect: null;
+}
+
+.menu:hover,
+.menu-item:hover,
+.menu-button:hover,
+.menu-button:showing {
+    -fx-background-color: accent-color-dark;
+    /*-fx-opacity: 0.6;  Make menu background transparent too*/
+    -fx-background-radius: 0, 0;
+    -fx-effect: null;
+}
+
+/* Hide the down arrow for a menu placed in a menubar */
+.menu-bar > .container > .menu-button > .arrow-button > .arrow {
+    -fx-padding: 0.167em 0 0.250em 0; /* 2 0 3 0 */
+    -fx-background-color: black;
+    -fx-shape: null;
+    -fx-background-radius: 0, 0;
+    -fx-effect: null;
+}
+
+/******************************************************************************
+ * Menus - End                                                                *
+ ******************************************************************************/
+
+.text-field, .text-area, .content {
+    -fx-background-color: accent-color-dark;
+    -fx-border-color: accent-color-dark;
+    -fx-text-inner-color: text-color;
+}
+
+.button {
+    -fx-background-color: #0099ff;
+    -fx-border-color: #0099ff;
+    /*-fx-border-radius: 5em;*/
+    -fx-background-radius: 0;
+    -fx-text-fill: text-color;
+    -fx-font-family: Arial;
+    -fx-font-size: 14px;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ToggleButton                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.toggle-button {
+    -fx-background-color: accent-color-dark;
+    -fx-border-color: accent-color-blue;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+
+.toggle-button:focused {
+    -fx-color: -fx-focused-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius: 6.4, 5, 4, 3;
+}
+
+.toggle-button:hover {
+    -fx-color: #2f2f2f;
+}
+
+.toggle-button:armed {
+    -fx-color: -fx-pressed-base;
+}
+
+.toggle-button:selected {
+    -fx-background-color: accent-color-dark;
+    -fx-text-fill: text-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 1;
+    /* TODO: -fx-text-fill should be derived */
+    -fx-text-fill: -fx-light-text-color;
+}
+
+.toggle-button:selected:focused {
+    -fx-color: #2f2f2f;
+    -fx-background-insets: -1.4, 0, 1, 1;
+}
+
+.toggle-button:disabled {
+    -fx-background-color: r;
+    -fx-text-fill: text-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 1;
+    /* TODO: -fx-text-fill should be derived */
+    -fx-text-fill: -fx-light-text-color;
+}
+
+.toggle-button:show-mnemonics > .mnemonic-underline {
+    -fx-stroke: -fx-text-fill;
+} 
+
+/*******************************************************************************
+ *                                                                             *
+ * ScrollPane                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-pane, #scrollPane, .corner {
+    -fx-background-color: background-color;
+}
+
+.scroll-bar:horizontal {
+    visibility: false;
+    -fx-background-color: background-color;
+}
+
+.scroll-bar:vertical .increment-button {
+    visibility: false;
+    -fx-background-color: background-color;
+}
+
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: background-color;
+    visibility: false;
+
+}
+
+.scroll-bar:vertical  .track {
+-fx-background-color: background-color;
+}
